@@ -1,0 +1,140 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(36, 40 ,47);
+    font-family: Bender;
+    display: flex;
+    flex-direction: column;
+}
+*{
+    text-decoration: none;
+    list-style-type: none; 
+}
+@font-face {
+    font-family:"Bender";
+    src: url(/Web/media/font/Bender.otf);
+}
+#top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(23, 29, 37);
+    height: 100px;
+    background: linear-gradient(to right, rgb(59, 100, 144), rgb(15, 33, 100));
+    background-size: 200% 100%;
+    animation: gradientMove 7s ease infinite;
+    z-index: 2;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 100% 0;
+    }
+    50% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+#top-bar-title {
+    color: azure;
+    font-size: 47px;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+}
+
+#clock {
+    font-size: 32px;
+    color: azure;
+    margin-top: 137px;
+    margin-left: 200px;
+    z-index: 2;
+}
+
+
+#side-bar {
+    background-color: rgb(27, 40, 56);
+    width: 184px;
+    display: flex;
+    flex-direction: column; /* 纵向排列内容 */
+    height: 100vh;
+    left: 0;
+
+}
+#side-bar-avater{
+    position: relative;
+    width: 100%;
+    height: 184px;
+}
+#side-bar-avater img{
+    top: auto;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+}
+#side-bar-avater img#side-bar-avater-frame{
+    z-index: 1;
+    transform: translate(-20px,-20px);
+}
+#side-bar-avater img#side-bar-avater-img{
+    z-index: 0;
+}
+#side-bar ul{
+    margin: 0;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to right,  rgb(21, 100, 238), rgb(27, 40, 56));
+    border-bottom: 3px solid rgb(94, 92, 92);
+}
+#side-bar ul li{
+    margin-top: 10px;
+    width: 100%;
+    height: 30px;
+    
+}
+#side-bar ul li a{
+    color: azure;
+    font-size: 27px;
+    margin-left: 7%;
+}
+
+.index{
+    position: absolute;
+
+    margin-left: 184px;
+    top: 100px;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(14, 23, 34);
+}
+#index-statBar{
+    width: 100%;
+    height: 30px;
+    background-color: rgb(21, 100, 238);
+    border-top: 3px solid rgb(255, 252, 252);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#index-statBar p {
+    position: absolute;
+    color: azure;
+    font-size: 24px;
+    width: 100%;
+    margin: 0 auto;
+    left: 15%;
+    transform: translateY(-100%);
+    animation: welcomeMessage 0.7s ease-in-out forwards;
+}
+
+@keyframes welcomeMessage {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+}
