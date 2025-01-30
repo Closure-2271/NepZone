@@ -5,6 +5,7 @@ body{
     font-family: Bender;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 *{
     text-decoration: none;
@@ -75,6 +76,19 @@ body{
     position: absolute;
     left: 0;
 }
+#side-bar-avater img:hover{
+    animation: avaterScale 0.1s ease-in forwards;
+}
+@keyframes avaterScale{
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+
 #side-bar-avater img#side-bar-avater-frame{
     z-index: 1;
     transform: translate(-20px,-20px);
@@ -100,6 +114,10 @@ body{
     color: azure;
     font-size: 27px;
     margin-left: 7%;
+}
+#side-bar ul li:hover{
+    background-color: rgb(54, 93, 236);
+    margin-left: 10px;
 }
 
 .index{
