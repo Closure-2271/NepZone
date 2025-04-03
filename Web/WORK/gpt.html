@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Web/stylesheet/style-work.css">
+    <link rel="stylesheet" href="/Web/stylesheet/style.css">
     <title>NEPZONE</title>
 </head>
 <body>
@@ -33,16 +33,15 @@
         </ul>
     </div>
     <div class="index">
-        
         <div class="index-daily">
         </div>
         <div id="index-statBar">
             <p id="index-statBar-welcome"><script src="/Web/scripts/statBar.js"></script></p>
         </div>
-        <div id="index-app">
-            <a href="./gpt.html">
-                <img src="/Web/media/pic/openai.webp">
-            </a>
+        <div class="index-app-gpt">
+            <script src="/Web/scripts/gpt.js"></script>
+            <iframe src="/netlify/functions/proxy.js"></iframe>
+            >
         </div>
     </div>
 </body>
